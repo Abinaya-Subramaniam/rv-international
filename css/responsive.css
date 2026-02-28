@@ -1,0 +1,162 @@
+/* responsive.css — Mobile-First Breakpoints */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  .tutor-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  .tutor-photo-placeholder {
+    aspect-ratio: 3/2;
+    max-width: 420px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .course-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ── Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 280px;
+    background: var(--navy);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 2rem;
+    transition: right var(--transition);
+    box-shadow: -4px 0 40px rgba(0,0,0,0.4);
+    border-left: 1px solid var(--border-soft);
+    z-index: 998;
+  }
+
+  .nav-links.open { right: 0; }
+
+  .nav-link {
+    font-size: var(--size-base);
+    padding: 0.85rem 1.25rem;
+    width: 100%;
+  }
+
+  .nav-cta {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Overlay when nav open */
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 997;
+  }
+
+  .nav-overlay.show { display: block; }
+
+  /* Sections */
+  .section { padding: clamp(3rem, 8vw, 5rem) 0; }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .course-card:last-child { grid-column: 1; }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid .review-card:nth-child(4),
+  .reviews-grid .review-card:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  .contact-section .section-title,
+  .contact-section .section-label {
+    text-align: center;
+  }
+
+  .hero-stats {
+    gap: var(--gap-sm);
+    padding: 1.25rem;
+  }
+
+  .stat-divider { display: none; }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .tutor-photo-placeholder { aspect-ratio: 1/1; }
+
+  .tutor-message blockquote { font-size: var(--size-base); }
+
+  .contact-form-wrap { padding: 1.75rem; }
+
+  .back-to-top { bottom: 1.25rem; right: 1.25rem; }
+}
+
+/* ── Small Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: 100%; max-width: 300px; justify-content: center; }
+
+  .footer-links { flex-direction: column; align-items: center; }
+
+  .cert-badges { justify-content: center; }
+}
+
+/* ── Large (≥ 1280px) ── */
+@media (min-width: 1280px) {
+  .courses-grid { gap: var(--gap-lg); }
+  .reviews-grid { gap: var(--gap-lg); }
+}
+
+/* ── Print ── */
+@media print {
+  .nav-wrapper, .hero-scroll-hint, .back-to-top { display: none; }
+  .hero { min-height: auto; padding: 2rem 0; }
+  .section { padding: 2rem 0; }
+}
+
+/* Fix for courses grid in mobile view */
+@media (max-width: 768px) {
+  .courses-grid[style*="grid-template-columns: repeat(2, minmax(0, 1fr))"] {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}

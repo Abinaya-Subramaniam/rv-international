@@ -1,0 +1,66 @@
+/* variables.css — Design Tokens */
+:root {
+  /* ── Colors — Calm Professional Blue Palette ──
+     Research-backed: deep navy + trustworthy mid-blue + warm white bg
+     + amber accent (blue's natural complement per color theory)
+     Used by Stripe, IBM, LinkedIn for trust & calm ── */
+  --navy:        #0f1f3d;          /* deep midnight navy — dark sections bg */
+  --navy-mid:    #162847;          /* rich navy — secondary dark */
+  --navy-light:  #1a56db;          /* clear, calm primary blue (WCAG AA on white) */
+  --navy-soft:   #2563eb;          /* slightly lighter brand blue for hovers */
+  --gold:        #e8a838;          /* warm amber accent — blue's complement */
+  --gold-light:  #f5c15e;          /* lighter amber */
+  --gold-pale:   #fef3dc;          /* pale amber tint */
+  --cream:       #f7f9fc;          /* cool blue-white — easy on eyes */
+  --cream-dark:  #eef2f9;          /* soft section separator */
+  --white:       #ffffff;
+  --text-main:   #0d1b35;          /* near-black with blue depth */
+  --text-body:   #374869;          /* balanced blue-grey body text */
+  --text-muted:  #7b8fb0;          /* muted steel-blue */
+  --border:      rgba(26, 86, 219, 0.15);
+  --border-soft: rgba(255,255,255,0.10);
+
+  /* ── Typography ── */
+  --font-display: 'Jost', system-ui, sans-serif;
+  --font-body:    'Jost', system-ui, sans-serif;
+
+  --size-xs:   0.75rem;   /* 12px */
+  --size-sm:   0.875rem;  /* 14px */
+  --size-base: 1rem;      /* 16px */
+  --size-md:   1.125rem;  /* 18px */
+  --size-lg:   1.25rem;   /* 20px */
+  --size-xl:   1.5rem;    /* 24px */
+  --size-2xl:  2rem;      /* 32px */
+  --size-3xl:  2.5rem;    /* 40px */
+  --size-4xl:  3.25rem;   /* 52px */
+  --size-5xl:  4.25rem;   /* 68px */
+  --size-6xl:  5.5rem;    /* 88px */
+
+  /* ── Spacing ── */
+  --gap-xs:  0.5rem;
+  --gap-sm:  1rem;
+  --gap-md:  1.5rem;
+  --gap-lg:  2.5rem;
+  --gap-xl:  4rem;
+  --gap-2xl: 6rem;
+  --gap-3xl: 8rem;
+
+  /* ── Layout ── */
+  --container-max: 1200px;
+  --container-pad: clamp(1.25rem, 5vw, 3rem);
+  --section-pad:   clamp(4rem, 10vw, 8rem);
+
+  /* ── Effects ── */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:  0 8px 32px rgba(0,0,0,0.12);
+  --shadow-lg:  0 20px 60px rgba(0,0,0,0.18);
+  --shadow-gold: 0 0 40px rgba(232, 168, 56, 0.15);
+
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}

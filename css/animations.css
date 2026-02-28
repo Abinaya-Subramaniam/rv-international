@@ -1,0 +1,55 @@
+/* animations.css — Scroll Reveals & Transitions */
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+.reveal-delay-4 { transition-delay: 0.48s; }
+
+/* ── Active nav link underline ── */
+.nav-link.active-section {
+  color: var(--gold);
+}
+
+/* ── Hero load animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Page load: first reveal doesn't need JS */
+.hero .reveal {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  opacity: 1;
+  transform: none;
+}
+
+.hero .reveal-delay-1 { animation-delay: 0.15s; }
+.hero .reveal-delay-2 { animation-delay: 0.3s; }
+.hero .reveal-delay-3 { animation-delay: 0.45s; }
+.hero .reveal-delay-4 { animation-delay: 0.6s; }
+
+/* Remove hero override after animation (so JS doesn't fight) */
+.hero .reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Focus visible ── */
+*:focus-visible {
+  outline: 2.5px solid var(--navy-light);
+  outline-offset: 3px;
+  border-radius: 3px;
+}

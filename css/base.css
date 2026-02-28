@@ -1,0 +1,134 @@
+/* base.css — Typography & Layout Foundation */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  color: var(--text-main);
+  background-color: var(--cream);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── Container ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+}
+
+/* ── Section Base ── */
+.section {
+  padding: var(--section-pad) 0;
+}
+
+/* ── Typography Scale ── */
+.section-label {
+  font-family: var(--font-body);
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy-soft);
+  margin-bottom: var(--gap-sm);
+  display: block;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--size-3xl), 5vw, var(--size-5xl));
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--navy);
+  margin-bottom: var(--gap-md);
+  letter-spacing: -0.03em;
+}
+
+.section-title em {
+  font-style: normal;
+  color: var(--navy-light);
+  font-weight: 900;
+}
+
+.section-subtitle {
+  font-size: var(--size-md);
+  color: var(--text-body);
+  max-width: 540px;
+  margin: 0 auto var(--gap-xl);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.body-text {
+  font-size: var(--size-md);
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: var(--gap-md);
+}
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: 3px;
+  font-family: var(--font-body);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--navy-light);
+  color: var(--white);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--navy);
+  transform: translateX(-100%);
+  transition: transform var(--transition);
+  z-index: 0;
+}
+
+.btn-primary:hover::before { transform: translateX(0); }
+.btn-primary:hover { color: var(--gold); }
+.btn-primary span, .btn-primary { position: relative; z-index: 1; }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255,255,255,0.4);
+}
+
+.btn-ghost:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--gold);
+}
+
+.btn-full { width: 100%; justify-content: center; }
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
