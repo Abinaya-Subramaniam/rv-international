@@ -1,4 +1,3 @@
-// animations.js — Scroll-triggered reveal animations
 
 (function () {
   'use strict';

@@ -1,9 +1,4 @@
-/* variables.css — Design Tokens */
 :root {
-  /* ── Colors — Calm Professional Blue Palette ──
-     Research-backed: deep navy + trustworthy mid-blue + warm white bg
-     + amber accent (blue's natural complement per color theory)
-     Used by Stripe, IBM, LinkedIn for trust & calm ── */
   --navy:        #0f1f3d;          /* deep midnight navy — dark sections bg */
   --navy-mid:    #162847;          /* rich navy — secondary dark */
   --navy-light:  #1a56db;          /* clear, calm primary blue (WCAG AA on white) */

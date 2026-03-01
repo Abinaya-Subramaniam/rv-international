@@ -1,6 +1,4 @@
-/* animations.css — Scroll Reveals & Transitions */
 
-/* ── Reveal on scroll ── */
 .reveal {
   opacity: 0;
   transform: translateY(28px);

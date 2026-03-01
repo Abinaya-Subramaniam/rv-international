@@ -1,6 +1,4 @@
-/* responsive.css — Mobile-First Breakpoints */
 
-/* ── Tablet (≤ 1024px) ── */
 @media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -28,64 +26,83 @@
 
 /* ── Mobile (≤ 768px) ── */
 @media (max-width: 768px) {
-  /* Nav */
-  .nav-toggle { display: flex; }
+  /* ── Nav: ensure toggle shows, sidebar works ── */
+  .nav-toggle {
+    display: flex;
+    z-index: 1001;
+    position: relative;
+  }
 
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
     bottom: 0;
-    width: 280px;
+    width: min(280px, 85vw);
     background: var(--navy);
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 0.5rem;
     padding: 2rem;
-    transition: right var(--transition);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: -4px 0 40px rgba(0,0,0,0.4);
     border-left: 1px solid var(--border-soft);
-    z-index: 998;
+    z-index: 999;
+    list-style: none;
   }
 
-  .nav-links.open { right: 0; }
+  .nav-links.open {
+    right: 0;
+  }
 
   .nav-link {
     font-size: var(--size-base);
     padding: 0.85rem 1.25rem;
     width: 100%;
+    display: block;
   }
 
   .nav-cta {
     margin-top: 0.5rem;
     width: 100%;
     text-align: center;
+    display: block;
   }
 
-  /* Overlay when nav open */
+  /* ── Overlay when nav open ── */
   .nav-overlay {
     display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.6);
     z-index: 997;
+    cursor: pointer;
   }
 
-  .nav-overlay.show { display: block; }
+  .nav-overlay.show {
+    display: block;
+  }
 
-  /* Sections */
-  .section { padding: clamp(3rem, 8vw, 5rem) 0; }
+  /* ── Sections ── */
+  .section {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+  }
 
   .about-cards {
     grid-template-columns: 1fr;
   }
 
   .courses-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  .course-card:last-child { grid-column: 1; }
+  .course-card:last-child {
+    grid-column: 1;
+  }
 
   .reviews-grid {
     grid-template-columns: 1fr;
@@ -109,39 +126,127 @@
   .hero-stats {
     gap: var(--gap-sm);
     padding: 1.25rem;
-  }
-
-  .stat-divider { display: none; }
-
-  .hero-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 
-  .tutor-photo-placeholder { aspect-ratio: 1/1; }
+  .stat-divider {
+    display: none;
+  }
 
-  .tutor-message blockquote { font-size: var(--size-base); }
+  .tutor-photo-placeholder {
+    aspect-ratio: 1/1;
+  }
 
-  .contact-form-wrap { padding: 1.75rem; }
+  .tutor-message blockquote {
+    font-size: var(--size-base);
+  }
 
-  .back-to-top { bottom: 1.25rem; right: 1.25rem; }
+  .contact-form-wrap {
+    padding: 1.75rem;
+  }
+
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  /* Exams grid */
+  .exams-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Footer alignment fix */
+  .footer-inner {
+    padding: 0 1.5rem;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-credit {
+    text-align: center;
+  }
+
+  .footer-contact-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Achievers grid */
+  .achievers-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Tutor work experience — stack on mobile */
+  .tutor-content [style*="display: flex; align-items: flex-start; gap: 1rem"] {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Course B1-C2 wide card inner layout */
+  .course-card [style*="display: flex; align-items: flex-start; gap: 2rem"] {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* ── Small Mobile (≤ 480px) ── */
 @media (max-width: 480px) {
-  .hero-actions { flex-direction: column; align-items: center; }
-  .hero-actions .btn { width: 100%; max-width: 300px; justify-content: center; }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
 
-  .footer-links { flex-direction: column; align-items: center; }
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
 
-  .cert-badges { justify-content: center; }
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cert-badges {
+    justify-content: center;
+  }
+
+  .exam-card-links {
+    flex-direction: column;
+  }
+
+  .contact-item {
+    padding: 1rem;
+  }
 }
 
 /* ── Large (≥ 1280px) ── */
 @media (min-width: 1280px) {
-  .courses-grid { gap: var(--gap-lg); }
-  .reviews-grid { gap: var(--gap-lg); }
+  .courses-grid {
+    gap: var(--gap-lg);
+  }
+
+  .reviews-grid {
+    gap: var(--gap-lg);
+  }
 }
 
 /* ── Print ── */
@@ -149,14 +254,4 @@
   .nav-wrapper, .hero-scroll-hint, .back-to-top { display: none; }
   .hero { min-height: auto; padding: 2rem 0; }
   .section { padding: 2rem 0; }
-}
-
-/* Fix for courses grid in mobile view */
-@media (max-width: 768px) {
-  .courses-grid[style*="grid-template-columns: repeat(2, minmax(0, 1fr))"] {
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
 }

@@ -1,6 +1,4 @@
-/* sections.css — Page Section Layouts */
 
-/* ── HERO ── */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -612,4 +610,238 @@ a.contact-value:hover { color: var(--gold); }
   border-top: 1px solid var(--border-soft);
   padding-top: 1.5rem;
   width: 100%;
+}
+
+/* ========== ADDITIONS TO sections.css ========== */
+/* Add these styles to your existing sections.css file */
+
+/* ── EXAMS SECTION ── */
+.exams-section {
+  background: var(--cream-dark);
+  text-align: center;
+}
+
+.exams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-md);
+  text-align: left;
+  margin-top: 2.5rem;
+}
+
+/* Make the Goethe card (which has most content) span full width */
+.exams-grid .exam-card:nth-child(2) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .exams-grid {
+    grid-template-columns: 1fr;
+  }
+  .exams-grid .exam-card:nth-child(2) {
+    grid-column: 1;
+  }
+}
+
+.exam-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  border: 1px solid rgba(13,27,42,0.08);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+}
+
+.exam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(26,86,219,0.2);
+}
+
+.exam-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.exam-card-badge {
+  background: var(--navy);
+  color: var(--gold-light);
+  font-size: var(--size-xs);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 3px;
+  border: 1px solid rgba(232,168,56,0.3);
+  flex-shrink: 0;
+}
+
+.exam-card-title {
+  font-family: var(--font-display);
+  font-size: var(--size-lg);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.exam-card-desc {
+  font-size: var(--size-sm);
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.exam-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.exam-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--size-sm);
+  font-weight: 500;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  text-decoration: none;
+  width: fit-content;
+}
+
+.exam-link--web {
+  background: rgba(26,86,219,0.08);
+  color: var(--navy-light);
+  border: 1px solid rgba(26,86,219,0.2);
+}
+
+.exam-link--web:hover {
+  background: var(--navy-light);
+  color: var(--white);
+}
+
+.exam-link--model {
+  background: rgba(232,168,56,0.1);
+  color: var(--navy);
+  border: 1px solid rgba(232,168,56,0.3);
+  opacity: 0.7;
+  cursor: default;
+}
+
+.exam-link--audio {
+  background: rgba(13,27,42,0.05);
+  color: var(--text-muted);
+  border: 1px solid rgba(13,27,42,0.1);
+  opacity: 0.7;
+  cursor: default;
+}
+
+.exam-level-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: var(--size-xs);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition);
+  background: rgba(26,86,219,0.08);
+  color: var(--navy-light);
+  border: 1px solid rgba(26,86,219,0.2);
+}
+
+.exam-level-pill:hover {
+  background: var(--navy-light);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.exam-level-pill--audio {
+  background: rgba(13,27,42,0.05);
+  color: var(--text-muted);
+  border: 1px solid rgba(13,27,42,0.1);
+  opacity: 0.6;
+  cursor: default;
+}
+
+.exam-model-papers,
+.exam-audio-papers {
+  margin-top: 0.25rem;
+}
+
+/* ── COURSE META PILLS ── */
+.course-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.course-duration-pill,
+.course-schedule-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--size-xs);
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+.course-duration-pill {
+  background: rgba(26,86,219,0.08);
+  color: var(--navy-light);
+  border: 1px solid rgba(26,86,219,0.18);
+}
+
+.course-schedule-pill {
+  background: rgba(232,168,56,0.1);
+  color: #92650a;
+  border: 1px solid rgba(232,168,56,0.3);
+}
+
+/* ── FOOTER ADDITIONS ── */
+.footer-policy-link {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-policy-link:hover {
+  color: var(--gold);
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact-link {
+  color: rgba(255,255,255,0.6);
+  font-size: var(--size-sm);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-contact-link:hover {
+  color: var(--gold);
+}
+
+.footer-credit {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
 }

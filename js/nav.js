@@ -1,4 +1,3 @@
-// nav.js — Navigation interactions
 
 (function () {
   'use strict';

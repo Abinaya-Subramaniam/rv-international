@@ -1,4 +1,3 @@
-// form.js — Contact form validation & submission
 
 (function () {
   'use strict';
