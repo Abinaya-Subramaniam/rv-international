@@ -271,90 +271,135 @@
       </div>
     </section>
 
+   
     <!-- ========== EXAMS ========== -->
-    <section class="section exams-section" id="exams" aria-labelledby="exams-heading">
+    <section class="section exams-section" id="exams" aria-labelledby="exams-heading" style="background: var(--cream);">
       <div class="container">
         <div class="section-label reveal">Certifications</div>
         <h2 id="exams-heading" class="section-title reveal">Recognised German <em>Examinations</em></h2>
         <p class="section-subtitle reveal">We prepare students for all major internationally recognised German language certifications</p>
 
-        <div class="exams-grid reveal">
-
-          <!-- ÖSD -->
-          <div class="exam-card">
-            <div class="exam-card-header">
-              <span class="exam-card-badge">ÖSD</span>
-              <h3 class="exam-card-title">Österreichisches Sprachdiplom Deutsch</h3>
-            </div>
-            <p class="exam-card-desc">Austria-based internationally recognised German language diploma. Accepted for visa, work, and study applications across Europe.</p>
-            <div class="exam-card-links">
-              <a href="https://www.osd.at" target="_blank" rel="noopener noreferrer" class="exam-link exam-link--web">🌐 Official Website</a>
-            </div>
-          </div>
-
-          <!-- Goethe -->
-          <div class="exam-card">
-            <div class="exam-card-header">
-              <span class="exam-card-badge">Goethe</span>
-              <h3 class="exam-card-title">Goethe-Institut Certificates</h3>
-            </div>
-            <p class="exam-card-desc">World's most recognised German language certificates, accepted globally for study, immigration, and professional purposes across all levels A1–C2.</p>
-            <div class="exam-card-links">
-              <a href="https://www.goethe.de/de/index.html" target="_blank" rel="noopener noreferrer" class="exam-link exam-link--web">🌐 Official Website</a>
-              <div class="exam-model-papers">
-                <p style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.5rem; letter-spacing: 0.06em; text-transform: uppercase;">Model Papers by Level:</p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/A1_sd1/sd_1_modellsatz.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">A1</a>
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Modellsatz_Erwachsene.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">A2</a>
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/B1/b1_modellsatz_erwachsene.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">B1</a>
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/B2/b2_modellsatz_erwachsene.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">B2</a>
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/C1_modular/c1-modular_modellsatz.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">C1</a>
-                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/C2/c2_modellsatz.pdf" target="_blank" rel="noopener noreferrer" class="exam-level-pill">C2</a>
+        <!-- 1-2-2 Layout -->
+        <div style="margin-top: 3rem;">
+          
+          <!-- First row: 1 card (ÖSD) -->
+          <div style="margin-bottom: 1.5rem;">
+            <div class="exam-card" style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition);">
+              <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div style="flex: 0 0 80px; text-align: left;" class="osd-tag-container">
+                  <span style="display: inline-block; background: var(--navy-light); color: var(--white); font-size: 1rem; font-weight: 700; padding: 0.4rem 1.2rem; border-radius: 30px;">ÖSD</span>
+                </div>
+                <div style="flex: 1;">
+                  <h3 style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">Österreichisches Sprachdiplom Deutsch</h3>
+                  <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">Austria-based internationally recognised German language diploma. Accepted for visa, work, and study applications across Europe.</p>
+                  <a href="https://www.osd.at" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: var(--navy-light); font-size: 0.9rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--navy-light); padding-bottom: 2px;">Official Website ↗</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- telc -->
-          <div class="exam-card">
-            <div class="exam-card-header">
-              <span class="exam-card-badge">telc</span>
-              <h3 class="exam-card-title">telc GmbH Certificates</h3>
+          <!-- Second row: 2 cards (Goethe & telc) -->
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 1.5rem;">
+            
+            <!-- Goethe -->
+            <div class="exam-card" style="background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+              <div style="margin-bottom: 1rem;">
+                <span style="display: inline-block; background: var(--navy-light); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Goethe</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.4;">Goethe-Institut<br>Certificates</h3>
+              </div>
+              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">World's most recognised German language certificates, accepted globally for study, immigration, and professional purposes across all levels A1–C2.</p>
+              
+              <!-- Model Papers Section -->
+              <div style="margin-top: 0.5rem; margin-bottom: 1rem; border-top: 1px solid rgba(13,27,42,0.07); padding-top: 1rem;">
+                <p style="font-size: 0.75rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;">Model Papers</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/A1_sd1/sd_1_modellsatz.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">A1</a>
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Modellsatz_Erwachsene.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">A2</a>
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/B1/b1_modellsatz_erwachsene.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">B1</a>
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/B2/b2_modellsatz_erwachsene.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">B2</a>
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/C1_modular/c1-modular_modellsatz.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">C1</a>
+                  <a href="https://www.goethe.de/pro/relaunch/prf/materialien/C2/c2_modellsatz.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.7rem; border-radius: 20px; text-decoration: none; border: 1px solid rgba(26, 86, 219, 0.15);">C2</a>
+                </div>
+              </div>
+              
+              <div style="margin-top: auto;">
+                <a href="https://www.goethe.de/de/index.html" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: var(--navy-light); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--navy-light); padding-bottom: 2px;">Official Website ↗</a>
+              </div>
             </div>
-            <p class="exam-card-desc">European language certificates widely accepted for German visa and residency applications, integration courses, and professional registration.</p>
-            <div class="exam-card-links">
-              <a href="https://www.telc.net" target="_blank" rel="noopener noreferrer" class="exam-link exam-link--web">🌐 Official Website</a>
+
+            <!-- telc -->
+            <div class="exam-card" style="background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+              <div style="margin-bottom: 1rem;">
+                <span style="display: inline-block; background: var(--navy-light); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.75rem;">telc</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.4;">telc GmbH<br>Certificates</h3>
+              </div>
+              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">European language certificates widely accepted for German visa and residency applications, integration courses, and professional registration.</p>
+              <div style="margin-top: auto;">
+                <a href="https://www.telc.net" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: var(--navy-light); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--navy-light); padding-bottom: 2px;">Official Website ↗</a>
+              </div>
             </div>
           </div>
 
-          <!-- DTZ -->
-          <div class="exam-card">
-            <div class="exam-card-header">
-              <span class="exam-card-badge">DTZ</span>
-              <h3 class="exam-card-title">Deutsch-Test für Zuwanderer</h3>
+          <!-- Third row: 2 cards (DTZ & fide) -->
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+            
+            <!-- DTZ -->
+            <div class="exam-card" style="background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+              <div style="margin-bottom: 1rem;">
+                <span style="display: inline-block; background: var(--navy-light); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.75rem;">DTZ</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.4;">Deutsch-Test für<br>Zuwanderer</h3>
+              </div>
+              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">The German integration test required for permanent residence and naturalisation in Germany. Tests levels A2–B1 in a single examination.</p>
+              <div style="margin-top: auto;">
+                <a href="https://www.gast.de/de/forschung-entwicklung/entwicklung/auftraege/deutsch-test-fuer-zuwanderer-dtz" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: var(--navy-light); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--navy-light); padding-bottom: 2px;">Official Website ↗</a>
+              </div>
             </div>
-            <p class="exam-card-desc">The German integration test required for permanent residence and naturalisation in Germany. Tests levels A2–B1 in a single examination.</p>
-            <div class="exam-card-links">
-              <a href="https://www.gast.de/de/forschung-entwicklung/entwicklung/auftraege/deutsch-test-fuer-zuwanderer-dtz" target="_blank" rel="noopener noreferrer" class="exam-link exam-link--web">🌐 Official Website</a>
+
+            <!-- fide -->
+            <div class="exam-card" style="background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+              <div style="margin-bottom: 1rem;">
+                <span style="display: inline-block; background: var(--navy-light); color: var(--white); font-size: 0.8rem; font-weight: 700; padding: 0.25rem 1rem; border-radius: 20px; letter-spacing: 0.05em; margin-bottom: 0.75rem;">fide</span>
+                <h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--navy); line-height: 1.4;">fide — Français,<br>Italiano, Deutsch</h3>
+              </div>
+              <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">Switzerland's official language certificate for permanent residency and naturalisation. Required for Swiss residence permit and citizenship applications.</p>
+              <div style="margin-top: auto;">
+                <a href="https://fide-service.ch/de" target="_blank" rel="noopener noreferrer" style="display: inline-block; color: var(--navy-light); font-size: 0.85rem; font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--navy-light); padding-bottom: 2px;">Official Website ↗</a>
+              </div>
             </div>
           </div>
 
-          <!-- fide -->
-          <div class="exam-card">
-            <div class="exam-card-header">
-              <span class="exam-card-badge">fide</span>
-              <h3 class="exam-card-title">fide — Français, Italiano, Deutsch</h3>
-            </div>
-            <p class="exam-card-desc">Switzerland's official language certificate for permanent residency and naturalisation. Required for Swiss residence permit and citizenship applications.</p>
-            <div class="exam-card-links">
-              <a href="https://fide-service.ch/de" target="_blank" rel="noopener noreferrer" class="exam-link exam-link--web">🌐 Official Website</a>
-            </div>
-          </div>
+          <!-- Mobile responsive style -->
+          <style>
+            @media (max-width: 768px) {
+              div[style*="grid-template-columns: repeat(2, 1fr)"] {
+                grid-template-columns: 1fr !important;
+              }
+              
+              div[style*="display: flex; flex-wrap: wrap; gap: 2rem;"] {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 1rem !important;
+              }
+              
+              div[style*="flex: 0 0 80px"] {
+                flex: 0 0 auto !important;
+              }
+              
+              /* Center ÖSD tag in mobile */
+              .osd-tag-container {
+                text-align: center !important;
+                width: 100% !important;
+              }
+              
+              .osd-tag-container span {
+                margin: 0 auto !important;
+              }
+            }
+          </style>
 
         </div>
       </div>
     </section>
-
     <!-- ========== TUTOR / INSTRUCTOR ========== -->
     <section class="section tutor-section" id="tutor" aria-labelledby="tutor-heading">
       <div class="container">
