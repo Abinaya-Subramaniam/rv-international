@@ -170,7 +170,7 @@
           <div class="about-text reveal">
             <h2 id="about-heading" class="section-title">Where Language Meets <em>Excellence</em></h2>
             <p class="body-text">
-              The <strong>RV International Language Institute</strong> is a specialized online German language school based in Point Pedro, Sri Lanka. Founded and led by Rasika Rasiyasingam — a certified ÖSD and telc examiner — the institute delivers structured, exam-focused German language education from A1 to C2 to learners across South Asia and worldwide.
+              The <strong>RV International Language Institute</strong> is a specialized online German language school based in Point Pedro, Sri Lanka. Founded and led by Ms. Rasika Rasiyasingam — a certified ÖSD and telc examiner — the institute delivers structured, exam-focused German language education from A1 to C2 to learners across South Asia and worldwide.
             </p>
             <p class="body-text">
               All German language courses are conducted via interactive live Zoom sessions, 7 days a week, making professional language education accessible from anywhere. The institute is officially registered under <strong>Reg. No. PV 00324544</strong>.
@@ -209,68 +209,116 @@
       </div>
     </section>
 
-    <!-- ========== COURSES ========== -->
     <section class="section courses-section" id="courses" aria-labelledby="courses-heading">
       <div class="container">
         <div class="section-label reveal">What We Offer</div>
         <h2 id="courses-heading" class="section-title reveal">Our German Language <em>Courses</em></h2>
         <p class="section-subtitle reveal">Structured, exam-focused German programmes for every learner — all levels A1 to C2</p>
 
-        <div class="courses-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; margin-left: auto; margin-right: auto;">
-          <!-- German A1 Full Course -->
-          <article class="course-card reveal" aria-label="German A1 Full Course">
-            <div class="course-flag">🇩🇪</div>
-            <h3 class="course-title">German A1 Full Course</h3>
-            <p class="course-desc">Complete beginner German course covering vocabulary, grammar, and exam preparation. Ideal for students starting from scratch with no prior German knowledge.</p>
-            <div class="course-meta-row">
-              <span class="course-duration-pill">⏱ 4–5 months</span>
-              <span class="course-schedule-pill">📅 Daily classes (7 days/week)</span>
+        <!-- 2-2 Grid Layout (two rows of two cards each) -->
+        <div class="courses-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+          
+          <!-- Mobile responsive override -->
+          <style>
+            @media (max-width: 768px) {
+              .courses-grid[style*="grid-template-columns: repeat(2, 1fr)"] {
+                grid-template-columns: 1fr !important;
+              }
+            }
+          </style>
+          
+          <!-- Row 1, Card 1: German A1 Full Course -->
+          <article class="course-card reveal" aria-label="German A1 Full Course" style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+            <div style="margin-bottom: 1rem;">
+              <div class="course-flag" style="font-size: 2rem; margin-bottom: 0.75rem;">🇩🇪</div>
+              <h3 class="course-title" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">German A1 Full Course</h3>
+              <p class="course-desc" style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">Complete beginner German course covering vocabulary, grammar, and exam preparation. Ideal for students starting from scratch with no prior German knowledge.</p>
             </div>
-            <div class="course-levels" style="margin-top: 1rem;">
-              <span>Vocabulary</span><span>Grammar</span><span>Exam Prep</span>
-            </div>
-          </article>
-
-          <!-- Exam Preparation -->
-          <article class="course-card course-card--featured reveal reveal-delay-1" aria-label="German Exam Preparation">
-            <div class="course-flag">🏆</div>
-            <h3 class="course-title">Exam Preparation</h3>
-            <p class="course-desc">Intensive, targeted preparation for leading German certifications — taught by a certified ÖSD and telc examiner who knows exactly what examiners look for.</p>
-            <div class="exam-list">
-              <span class="exam-pill">ÖSD</span>
-              <span class="exam-pill">Goethe</span>
-              <span class="exam-pill">telc</span>
-              <span class="exam-pill">DTZ</span>
-              <span class="exam-pill">fide</span>
-            </div>
-          </article>
-
-          <!-- B1–C2 Full Courses -->
-          <article class="course-card reveal" aria-label="German B1 to C2 Full Courses" style="grid-column: 1 / -1;">
-            <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
-              <div style="flex: 1; min-width: 220px;">
-                <div class="course-flag">📚</div>
-                <h3 class="course-title">B1 · B2 · C1 · C2 Full Courses</h3>
-                <p class="course-desc">Advanced German language courses covering in-depth vocabulary, complex grammar structures, and targeted exam preparation for upper-intermediate to mastery levels.</p>
+            <div style="margin-top: auto;">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">⏱ 4–5 months</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">📅 Daily classes</span>
               </div>
-              <div style="flex: 1; min-width: 220px; display: flex; flex-direction: column; gap: 1rem;">
-                <div class="course-meta-row">
-                  <span class="course-duration-pill">⏱ 6+ months per level</span>
-                  <span class="course-schedule-pill">📅 Daily classes (7 days/week)</span>
-                </div>
-                <div class="course-levels">
-                  <span>B1</span><span>B2</span><span>C1</span><span>C2</span>
-                </div>
-                <div class="course-levels">
-                  <span>Vocabulary</span><span>Grammar</span><span>Exam Prep</span>
-                </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Vocabulary</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Grammar</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Exam Prep</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 1, Card 2: German A2 Full Course -->
+          <article class="course-card reveal" aria-label="German A2 Full Course" style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+            <div style="margin-bottom: 1rem;">
+              <div class="course-flag" style="font-size: 2rem; margin-bottom: 0.75rem;">🇩🇪</div>
+              <h3 class="course-title" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">German A2 Full Course</h3>
+              <p class="course-desc" style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">Comprehensive A2 German course designed to strengthen your vocabulary, grammar, and speaking skills with structured lessons and focused exam preparation. Ideal for learners who have completed A1.</p>
+            </div>
+            <div style="margin-top: auto;">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">⏱ 5–6 months</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">📅 Daily classes</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Vocabulary</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Grammar</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Speaking</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Exam Prep</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 2, Card 1: Exam Preparation (featured) -->
+          <article class="course-card course-card--featured reveal" aria-label="German Exam Preparation" style="background: var(--navy); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+            <div style="margin-bottom: 1rem;">
+              <div class="course-flag" style="font-size: 2rem; margin-bottom: 0.75rem;">🏆</div>
+              <h3 class="course-title" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem;">Exam Preparation</h3>
+              <p class="course-desc" style="color: rgba(255,255,255,0.8); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">Intensive, targeted preparation for leading German certifications — taught by a certified ÖSD and telc examiner who knows exactly what examiners look for.</p>
+            </div>
+            <div style="margin-top: auto;">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="display: inline-block; background: rgba(232, 168, 56, 0.15); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid rgba(232, 168, 56, 0.3);">ÖSD</span>
+                <span style="display: inline-block; background: rgba(232, 168, 56, 0.15); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid rgba(232, 168, 56, 0.3);">Goethe</span>
+                <span style="display: inline-block; background: rgba(232, 168, 56, 0.15); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid rgba(232, 168, 56, 0.3);">telc</span>
+                <span style="display: inline-block; background: rgba(232, 168, 56, 0.15); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid rgba(232, 168, 56, 0.3);">DTZ</span>
+                <span style="display: inline-block; background: rgba(232, 168, 56, 0.15); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid rgba(232, 168, 56, 0.3);">fide</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Row 2, Card 2: B1–C2 Full Courses (simplified for 2-2 layout) -->
+          <article class="course-card reveal" aria-label="German B1 to C2 Full Courses" style="background: var(--white); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(13,27,42,0.07); transition: all var(--transition); display: flex; flex-direction: column; height: 100%;">
+            <div style="margin-bottom: 1rem;">
+              <div class="course-flag" style="font-size: 2rem; margin-bottom: 0.75rem;">📚</div>
+              <h3 class="course-title" style="font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 0.5rem;">B1 · B2 · C1 · C2</h3>
+              <p class="course-desc" style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem; flex-grow: 1;">Advanced German courses covering in-depth vocabulary, complex grammar, and targeted exam preparation for upper-intermediate to mastery levels.</p>
+            </div>
+            <div style="margin-top: auto;">
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">⏱ 6+ months/level</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.7rem; font-weight: 600; padding: 0.25rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">📅 Daily classes</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">B1</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">B2</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">C1</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.08); color: var(--navy-light); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 1rem; border-radius: 30px; border: 1px solid rgba(26, 86, 219, 0.15);">C2</span>
+              </div>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Vocabulary</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Grammar</span>
+                <span style="display: inline-block; background: rgba(26, 86, 219, 0.04); color: var(--navy); font-size: 0.7rem; font-weight: 500; padding: 0.2rem 0.8rem; border-radius: 20px; border: 1px solid rgba(13,27,42,0.1);">Exam Prep</span>
               </div>
             </div>
           </article>
         </div>
+        
+        <!-- Note about daily classes -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <p style="color: var(--text-muted); font-size: 0.9rem; border-bottom: 1px solid rgba(13,27,42,0.1); display: inline-block; padding-bottom: 0.5rem;">✨ All courses include daily live classes (7 days/week) with interactive learning</p>
+        </div>
       </div>
     </section>
-
    
    <!-- ========== EXAMS ========== -->
     <section class="section exams-section" id="exams" aria-labelledby="exams-heading" style="background: var(--cream);">
@@ -448,6 +496,7 @@
         </div>
       </div>
     </section>
+    
     <!-- ========== TUTOR / INSTRUCTOR ========== -->
     <section class="section tutor-section" id="tutor" aria-labelledby="tutor-heading">
       <div class="container">
@@ -489,7 +538,7 @@
               Students are prepared for major international German examinations including ÖSD, Goethe, telc, fide, and DTZ. Teaching combines linguistic accuracy, strong communication training, and modern digital methods to ensure lasting success.
             </p>
             <p class="tutor-bio">
-              In addition to managing the institute, Rasika collaborates with language schools in Germany and Switzerland, teaching online German courses and supporting exam preparation programmes. The goal is to provide high-quality, accessible, and professional German language education for learners worldwide.
+              In addition to managing the institute, Ms. Rasika collaborates with language schools in Germany and Switzerland, teaching online German courses and supporting exam preparation programmes. The goal is to provide high-quality, accessible, and professional German language education for learners worldwide.
             </p>
 
             <!-- Work Experience -->
@@ -523,7 +572,7 @@
               <blockquote>
                 Language is not just communication — it is a gateway to opportunity. Whether you are learning German to study in Europe, advance your career, or connect with a new culture, I am here to guide you every step of the way.
               </blockquote>
-              <cite>— Rasika Rasiyasingam, Founder &amp; Lead Instructor</cite>
+              <cite>— Ms. Rasika Rasiyasingam, Founder &amp; Lead Instructor</cite>
             </div>
           </div>
         </div>
@@ -600,7 +649,7 @@
         </div>
 
         <div class="reviews-cta reveal">
-          <a href="https://share.google/a2hPWOvsVT3vTXG3V" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <a href="https://www.google.com/search?client=safari&hs=Ye59&sca_esv=e40f04d2a6b22062&hl=de-lk&sxsrf=ANbL-n6FzTAbJ0-Mib_fva2bNpKr-PkoGA:1772119563421&q=rezensionen+f%C3%BCr+rv+international+language+institute+point+pedro&uds=ALYpb_mG5ZW0soIkvI3jBJi_Eq0g4Z6btuxJsLpxEILqmZq9sOc_Q04IcEX3YC_q-eiFrL6D0sTi3qwgvMD7JNfZi7-vHSi7k8fyMDeHmktjrdB2qmIJ_4BuGfsk15NzNChVycedCp6kNzroxQ_ukqLwWEiwjDUmOROfPigDgP7hjJwlhRkCDtMBOULctgUZQiVHdxzurL9fjE3-CE-87M6RZq-R8o_IkRwffYZKoEQM_J9ezL010SubursibdsGVPtEgGABZ0-vXZFNWZdTqKWRe8hZ5WrpSBM79o2Wdzl5kjnj5pGskev3LhQ8NXsA2d1BIa31DBz491w_ht18GQnuV8ie2r4oIVH9vTq7mbOQJWG7kZmPEbReDDr4UImEZjkMXwN0PMEb4aQ0GRuGI2WAPzv1BSkRzb4dS-VFvK6bPvHyCcssf4ughm8CGCvtcu0tI3syeJ44nBybjVSuP17Vckwmg7O8-A&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOYHeOkAg3xu_1aZQyQUBjNGmVbEM-b5cDHan_-E1Lkvp4-wYIzlnyiDhLrQwsySqKN3yIpN7qeBHXGst865EZiVRHeLlLjfIPBrpZyzTEnx0Tx6RtCzOdrF5c2ZFMxzmb6Pgx5S9IAK970ObLIeIrl84wstG&sa=X&ved=2ahUKEwj34M7ou_eSAxUIzTQHHb33MrsQk8gLegQIHBAB&ictx=1&biw=428&bih=781&dpr=3" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
             View All Reviews on Google ↗
           </a>
         </div>
