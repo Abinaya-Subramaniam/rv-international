@@ -1,13 +1,10 @@
-/* responsive.css — Mobile-First Breakpoints */
 
-/* ── Tablet (≤ 1024px) ── */
 @media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: var(--gap-xl);
   }
 
-  /* Tutor grid stacks vertically; order classes handle reorder */
   .tutor-grid {
     display: flex;
     flex-direction: column;
